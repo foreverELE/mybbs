@@ -9,7 +9,7 @@ class StaticPagesController extends Controller
 {
     //主页
     public function home(){
-        return view('web/static_pages/home');
+        return view('web.static_pages.home');
     }
 
     //帮助页

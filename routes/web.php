@@ -20,4 +20,7 @@ Route::group(['namespace'=>'Web'],function(){
     Route::get('help','StaticPagesController@help')->name('help');
     //关于
     Route::get('about','StaticPagesController@about')->name('about');
+
+    //注册
+    Route::get('signup','UserController@create')->name('signup');
 });
