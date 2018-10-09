@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes();
+//Auth::routes();
 
 Route::group(['namespace'=>'Web'],function(){
     //主页
@@ -23,4 +23,12 @@ Route::group(['namespace'=>'Web'],function(){
 
     //注册
     Route::get('signup','UserController@create')->name('signup');
+
+    Route::resource('users','UserController');
+
+
+    //登录/退出
+    Route::get('login','LoginController@showLoginForm')->name('login');
+    Route::post('login','LoginController@login')->name('login');
+    Route::delete('logout','LoginController@logout')->name('logout');
 });
